@@ -2,4 +2,15 @@
 
 <PageTitle>Index</PageTitle>
 
+@if (Code is null || State is null)
+{
+    <div class="d-flex flex-column gap-2">
+        <input class="form-control" type="text" placeholder="ClientId" @bind=@_clientId />
+        <input class="form-control" type="password" placeholder="Secret" @bind=@_secret />
+        <button class="btn btn-primary" type="button" @onclick=@OnAuth>Auth</button>
+    </div>
+}
+else
+{
 
+}
